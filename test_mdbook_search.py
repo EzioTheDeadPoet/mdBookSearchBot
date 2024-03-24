@@ -1,8 +1,9 @@
-import unittest
-
-class MyTestCase(unittest.TestCase):
-    def test_something(self):
-        self.assertEqual(True, False)  # add assertion here
+import mdbook_search
 
 if __name__ == '__main__':
-    unittest.main()
+    results = mdbook_search.search_wiki("error")
+    for result in results:
+        title = result["title"]
+        href = result["href"]
+        paragraph_preview = result["paragraph_preview"]
+        print(f"title: {title},href: {href}, paragraph_preview: {paragraph_preview}")
