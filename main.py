@@ -19,7 +19,7 @@ bot = discord.Bot()
 async def wiki_search(ctx, query: discord.Option(str)):
     results = mdbook_search.search_wiki(query)
     results_url = mdbook_url + "?search=" + mdbook_search.url_string(query)
-    embed_title = f"{len(results_url)}/{len(results)} search results for '{query}':"
+    embed_title = f"{len(results)}/{len(results)} search results for '{query}':"
     if len(results) > maxResults:
         embed_title = f"{maxResults}/{len(results)} search results for '{query}':"
     embed = discord.Embed(
@@ -30,8 +30,6 @@ async def wiki_search(ctx, query: discord.Option(str)):
     i = 0
     for result in results:
         i += 1
-        if i == maxResults:
-            break
         title = result["title"]
         href = result["href"]
         paragraph_preview = result["paragraph_preview"]
@@ -39,6 +37,8 @@ async def wiki_search(ctx, query: discord.Option(str)):
             paragraph_preview = "This result has no preview."
         embed.add_field(name="", value=f"[**{title}**]({href}) \n"
                                        f" ```{paragraph_preview}```", inline=False)
+        if i == maxResults:
+            break
     await ctx.respond(embed=embed)
 
 
