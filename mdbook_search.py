@@ -12,7 +12,7 @@ options = Options()
 options.add_argument("--headless=new")
 driver = webdriver.Chrome(options=options)
 
-mdBook_url = cfg["mdBookHomeURL"]
+mdBook_url = cfg["mdBook"]["mdBookHomeURL"]
 
 
 class SearchResult(dict):
@@ -21,7 +21,7 @@ class SearchResult(dict):
 
 
 def url_string(string):
-    return urllib.parse.quote(string, '/#')
+    return urllib.parse.quote(string, '/#?=')
 
 
 def get_html(url):

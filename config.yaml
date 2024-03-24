@@ -1,2 +1,5 @@
-mdBookHomeURL: https://wiki.wabbajack.org/
-mdBookName: Wabbajack Wiki
+mdBook:
+  mdBookHomeURL: https://wiki.wabbajack.org/
+  mdBookName: Wabbajack Wiki
+discord:
+  maxResults: 9
