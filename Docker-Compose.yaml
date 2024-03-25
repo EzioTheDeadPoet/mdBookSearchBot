@@ -1,0 +1,7 @@
+services:
+  mdbook-search-and-support-discord-bot:
+    image: eziothedeadpoet/mdbook-search-and-support-discord-bot:latest
+    env_file:
+      - .env
+      - secrets.env
+    restart: unless-stopped
