@@ -8,7 +8,7 @@ load_dotenv()
 mdbook_url = os.getenv("MDBOOK_HOME_URL")
 mdbook_name = os.getenv("MDBOOK_NAME")
 maxResults = int(os.getenv("DISCORD_MAX_RESULTS"))
-token = os.getenv("MDBOOK_SEARCHBOT_TOKEN")
+token = os.getenv("DISCORD_BOT_TOKEN")
 bot = discord.Bot()
 
 
