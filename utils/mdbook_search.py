@@ -1,18 +1,19 @@
 import urllib.parse
 import yaml
+import os
+from dotenv import load_dotenv
 from selenium import webdriver  # Installed
 from selenium.webdriver.chrome.options import Options  # Installed
 from bs4 import BeautifulSoup as Soup  # Installed
 
-with open("config.yaml", "r") as cfg_yaml:
-    cfg = yaml.safe_load(cfg_yaml)
+load_dotenv()
 
 # Setup Selenium Webdriver
 options = Options()
 options.add_argument("--headless=new")
 driver = webdriver.Chrome(options=options)
 
-mdBook_url = cfg["mdBook"]["mdBookHomeURL"]
+mdBook_url = os.getenv("MDBOOK_HOME_URL")
 
 
 class SearchResult(dict):

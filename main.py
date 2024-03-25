@@ -1,16 +1,14 @@
+import os
 import discord
-import yaml
+from dotenv import load_dotenv
 from utils import mdbook_search
 
-with open("secrets.yaml", "r") as secrets_yaml:
-    secrets = yaml.safe_load(secrets_yaml)
-with open("config.yaml", "r") as cfg_yaml:
-    cfg = yaml.safe_load(cfg_yaml)
+load_dotenv()
 
-mdbook_url = cfg["mdBook"]["mdBookHomeURL"]
-mdbook_name = cfg["mdBook"]["mdBookName"]
-maxResults = cfg["discord"]["maxResults"]
-
+mdbook_url = os.getenv("MDBOOK_HOME_URL")
+mdbook_name = os.getenv("MDBOOK_NAME")
+maxResults = int(os.getenv("DISCORD_MAX_RESULTS"))
+token = os.getenv("MDBOOK_SEARCHBOT_TOKEN")
 bot = discord.Bot()
 
 
@@ -41,4 +39,4 @@ async def wiki_search(ctx, query: discord.Option(str)):
     await ctx.respond(embed=embed)
 
 
-bot.run(secrets["token"])
+bot.run(token)

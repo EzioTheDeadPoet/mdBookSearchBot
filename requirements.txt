@@ -2,3 +2,4 @@ py-cord~=2.5.0
 selenium~=4.18.1
 beautifulsoup4~=4.13.0b2
 PyYAML~=6.0.1
+python-dotenv~=1.0.1
