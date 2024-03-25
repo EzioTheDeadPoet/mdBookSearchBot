@@ -18,9 +18,9 @@ https://docs.pycord.dev/en/stable/discord.html
 
 ## To-Do
 
-- Restructure Code to work with Docker for easier Deployment
-- Update Documentation (Instructions on how to set it up)
-- Add feature to define autocomplete targets for search queries
+- [x] Restructure Code to work with Docker for easier Deployment
+- [ ] Update Documentation (Instructions on how to set it up)
+- [ ] Add feature to define autocomplete targets for search queries
   - For easier repetition of queries that result in precise search results
  
 ## Plans for Feature Expansion
