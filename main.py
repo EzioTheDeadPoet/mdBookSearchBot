@@ -1,6 +1,6 @@
 import discord
 import yaml
-import mdbook_search
+from utils import mdbook_search
 
 with open("secrets.yaml", "r") as secrets_yaml:
     secrets = yaml.safe_load(secrets_yaml)
@@ -15,7 +15,6 @@ bot = discord.Bot()
 
 
 @bot.command(description=f"Search in {mdbook_name}.")
-# pycord will figure out the types for you
 async def wiki_search(ctx, query: discord.Option(str)):
     results = mdbook_search.search_wiki(query)
     results_url = mdbook_url + "?search=" + mdbook_search.url_string(query)

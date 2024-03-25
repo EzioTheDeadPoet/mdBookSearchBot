@@ -1,4 +1,4 @@
-import mdbook_search
+from utils import mdbook_search
 
 if __name__ == '__main__':
     results = mdbook_search.search_wiki("error")
