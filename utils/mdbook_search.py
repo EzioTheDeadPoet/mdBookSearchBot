@@ -11,6 +11,8 @@ load_dotenv()
 # Setup Selenium Webdriver
 options = Options()
 options.add_argument("--headless=new")
+options.add_argument("--no-sandbox")
+options.add_argument("--disable-dev-shm-usage")
 driver = webdriver.Chrome(options=options)
 
 mdBook_url = os.getenv("MDBOOK_HOME_URL")
