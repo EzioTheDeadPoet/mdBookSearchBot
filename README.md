@@ -9,6 +9,10 @@ This is more of a personal project intended to be used in the Wabbajack communit
 Follow this guide to get a Token for your Bot:
 https://docs.pycord.dev/en/stable/discord.html
 
+When you invite the bot to your server make sure you use the `OAuth2` tool to generate the proper invite link with the following settings:  
+![image](https://github.com/EzioTheDeadPoet/mdBookSearchBot/assets/52624146/ac5701fb-e7dc-44f6-8c57-d44897ade50b)  
+![image](https://github.com/EzioTheDeadPoet/mdBookSearchBot/assets/52624146/d736d11e-55fc-4394-bfaa-65c7310e144b)
+
 ### Configuration Environment Variables
 
 - `DISCORD_HBOT_TOKEN` Needs to be set to the bot token
