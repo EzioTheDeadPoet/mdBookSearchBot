@@ -1,0 +1,1 @@
+docker build -t eziothedeadpoet/mdbook-search-and-support-discord-bot .
