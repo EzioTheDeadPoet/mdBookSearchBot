@@ -17,6 +17,7 @@ async def wiki_search(ctx, query: discord.Option(str)):
     results = mdbook_search.search_wiki(query)
     if len(results) == 0:
         await ctx.respond("This query returned no results.", ephemeral=True)
+        return
     results_url = mdbook_url + "?search=" + mdbook_search.url_string(query)
     embed_title = f"{len(results)}/{len(results)} search results for '{query}':"
     if len(results) > maxResults:
