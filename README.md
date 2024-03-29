@@ -15,7 +15,7 @@ When you invite the bot to your server make sure you use the `OAuth2` tool to ge
 
 ### Configuration Environment Variables
 
-- `DISCORD_HBOT_TOKEN` Needs to be set to the bot token
+- `DISCORD_BOT_TOKEN` Needs to be set to the bot token
 - `MDBOOK_NAME` Name of the mdBook you want to search
 - `MDBOOK_HOME_URL` main url for your mdBook
 - `DISCORD_MAX_RESULTS` Max number of search results you want to be listed in the discord embed. I use `4` because it looks better. 
