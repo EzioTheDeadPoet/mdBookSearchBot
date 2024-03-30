@@ -1,0 +1,6 @@
+.github
+.venv
+assets
+tests
+.env
+secrets.env
